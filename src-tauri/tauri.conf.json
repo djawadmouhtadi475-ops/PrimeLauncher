@@ -1,0 +1,40 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Prime Launcher",
+    "version": "0.3.5"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": { "all": false, "open": true },
+      "os": { "all": true },
+      "dialog": { "all": true },
+      "fs": { "all": true }
+    },
+    "bundle": {
+      "active": true,
+      "category": "Game",
+      "copyright": "© GMU Studio (GMU Launcher)",
+      "identifier": "com.gmustudio.primelauncher",
+      "targets": ["msi", "nsis"]
+    },
+    "window": [
+      {
+        "fullscreen": false,
+        "height": 720,
+        "resizable": true,
+        "title": "Prime Launcher",
+        "width": 1100,
+        "center": true,
+        "decorations": false,
+        "transparent": true
+      }
+    ]
+  }
+}
